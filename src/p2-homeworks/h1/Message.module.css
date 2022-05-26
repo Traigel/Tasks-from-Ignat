@@ -1,3 +1,57 @@
-.message {
+.item {
+    margin-left: 20px;
+    display: grid;
+    grid-template-areas:
+    'avatar message';
+    grid-auto-columns: 50px 240px;
+    grid-gap: 10px;
+}
 
+.imgAvatar {
+    grid-area: avatar;
+}
+
+.imgAvatar img {
+    margin-top: 30px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+.username {
+    color: lightsalmon;
+}
+
+.time {
+    text-align: right;
+    color: darkgray;
+}
+
+.message {
+    grid-area: message;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.message {
+    position: relative;
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px 10px 10px 0;
+    background: #4d5156;
+    color: white;
+}
+
+.message::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 100%;
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(
+            60px at top left,
+            transparent 49%,
+            #4d5156 51%) no-repeat right bottom;
 }

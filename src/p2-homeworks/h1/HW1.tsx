@@ -1,9 +1,10 @@
 import React from 'react'
+import Message from "./Message";
 
 const messageData = {
-    avatar: 'https://sun9-74.userapi.com/Ph-WiuOtF985il9AvN9JqiCWedmHtSGSSTXrSA/ltEB2Z2-YO4.jpg',
-    name: 'Some Name',
-    message: 'some text',
+    avatar: 'https://shapka-youtube.ru/wp-content/uploads/2021/02/prikolnaya-avatarka-dlya-patsanov.jpg',
+    name: 'Vladimir T',
+    message: 'Hi Ignat. How are you?',
     time: '22:00',
 }
 
@@ -11,10 +12,6 @@ function HW1() {
     return (
         <div>
             <hr/>
-            homeworks 1
-
-            should work (должно работать)
-
             <Message
                 avatar={messageData.avatar}
                 name={messageData.name}
@@ -22,10 +19,10 @@ function HW1() {
                 time={messageData.time}
             />
 
-            <hr/>
-            для личного творчества, могу проверить
-            <AlternativeMessage/>
-            <hr/>
+            {/*<hr/>*/}
+            {/*для личного творчества, могу проверить*/}
+            {/*<AlternativeMessage/>*/}
+            {/*<hr/>*/}
         </div>
     )
 }
