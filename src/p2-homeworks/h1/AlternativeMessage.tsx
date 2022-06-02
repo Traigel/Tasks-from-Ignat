@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './Message.module.css'
+import s from './AlternativeMessage.module.css'
 
 type MessageType = {
     avatar: string,
@@ -8,7 +8,7 @@ type MessageType = {
     time: string
 }
 
-function Message(props: MessageType) {
+export const AlternativeMessage = (props: MessageType) => {
     return <div className={s.item}>
         <div className={s.imgAvatar}>
             <img alt={'avatar'} src={props.avatar}/>
@@ -26,5 +26,3 @@ function Message(props: MessageType) {
         </div>
     </div>
 }
-
-export default Message

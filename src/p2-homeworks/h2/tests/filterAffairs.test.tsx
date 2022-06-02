@@ -1,7 +1,11 @@
 import React from 'react'
-import {AffairType, filterAffairs} from '../HW2'
+import {AffairPriorityType, AffairType, filterAffairs} from '../HW2'
 
-let initialState: AffairType[]
+let initialState: Array<{
+    _id: number,
+    name: string,
+    priority: AffairPriorityType
+}>
 
 beforeEach(() => {
     initialState = [

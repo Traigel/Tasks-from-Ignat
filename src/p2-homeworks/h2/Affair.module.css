@@ -1,0 +1,17 @@
+.items {
+    display: grid;
+    grid-template-columns: 90px 75px 1px;
+}
+
+.low {
+    color: green;
+}
+
+.high {
+    color: red;
+}
+
+.middle {
+    color: darkorange;
+}
+
