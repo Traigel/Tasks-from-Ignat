@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './Affairs.module.css'
+import styles from './Affairs.module.css'
 import Affair from './Affair'
 import {AffairType, FilterType} from './HW2'
 
@@ -33,12 +33,12 @@ function Affairs(props: AffairsPropsType) {
     }
 
     return (
-        <div className={s.item}>
+        <div className={styles.item}>
             {mappedAffairs}
-            <button className={s.buttonItem} onClick={setAll}>All</button>
-            <button className={s.buttonItem} onClick={setHigh}>High</button>
-            <button className={s.buttonItem} onClick={setMiddle}>Middle</button>
-            <button className={s.buttonItem} onClick={setLow}>Low</button>
+            <button className={styles.buttonItem} onClick={setAll}>All</button>
+            <button className={styles.buttonItem} onClick={setHigh}>High</button>
+            <button className={styles.buttonItem} onClick={setMiddle}>Middle</button>
+            <button className={styles.buttonItem} onClick={setLow}>Low</button>
         </div>
     )
 }

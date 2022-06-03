@@ -1,5 +1,5 @@
 import React from 'react'
-import s from './Affair.module.css'
+import styles from './Affair.module.css'
 import {AffairPriorityType} from "./HW2";
 
 type AffairPropsType = {
@@ -9,17 +9,15 @@ type AffairPropsType = {
 }
 
 function Affair(props: AffairPropsType) {
-
     const deleteCallback = () => {
         props.deleteAffairCallback()
     }
-
     return (
-        <div className={s.items}>
+        <div className={styles.items}>
             <div>
                 {props.name}
             </div>
-            <div className={`${props.priority === 'low' ? s.low : props.priority === 'high' ? s.high : s.middle}`}>
+            <div className={`${props.priority === 'low' ? styles.low : props.priority === 'high' ? styles.high : styles.middle}`}>
                 [{props.priority}]
             </div>
             <div>
