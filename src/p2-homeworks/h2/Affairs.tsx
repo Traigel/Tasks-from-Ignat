@@ -5,7 +5,7 @@ import {AffairType, FilterType} from './HW2'
 
 type AffairsPropsType = { // need to fix any
     data: AffairType
-    setFilter: (filter: FilterType) => void
+    setFilterHandler: (filterTitle: FilterType) => void
     deleteAffairCallback: (id: number) => void
 }
 
@@ -19,7 +19,7 @@ function Affairs(props: AffairsPropsType) {
         />
     ))
 
-    const onClickHandler = (filter: FilterType) => props.setFilter(filter)
+    const onClickHandler = (filterTitle: FilterType) => props.setFilterHandler(filterTitle)
 
     return (
         <div className={styles.item}>
