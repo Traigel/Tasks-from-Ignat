@@ -14,7 +14,7 @@ const Greeting: React.FC<GreetingPropsType> = (
     {name, setNameCallback, addUser, error, totalUsers}) => {
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => setNameCallback(e.currentTarget.value)
-    const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => e.key === 'Enter' && addUser()
+    const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => name !== '' && e.key === 'Enter' && addUser()
     const inputClass = (name === '' ? style.error : '')// need to fix with (?:)
 
     return (
