@@ -1,7 +1,17 @@
-.someClass {
+.MainTitle {
+    display: inline-block;
+    padding: 20px;
+}
 
+.title {
+    margin-left: 10px;
 }
 
 .error {
-    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+.errSpan {
+    display: block;
 }
