@@ -15,9 +15,13 @@ type GreetingContainerPropsType = {
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => {
     const [name, setName] = useState<string>('') // need to fix any
     const [error, setError] = useState<string>('') // need to fix any
-
-    const setNameCallback = (e: string) =>
-        e === ' ' ? setError('Error, name must start with a letter!') : setName(e)
+///mg
+    const setNameCallback = (e: string) => {
+        if (!/^[A-z]/.test(e)) {
+            setError('Error, name must start with a letter!')
+            setName('')
+        } else setName(e)
+    }
 
     const addUser = () => {
         addUserCallback(name)

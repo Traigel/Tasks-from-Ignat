@@ -7,11 +7,11 @@
     margin-left: 10px;
 }
 
-.error {
-    background-color: rgba(255, 0, 0, 0.3);
-    border-radius: 10px;
+.error:focus {
+    border: 3px solid red;
 }
 
 .errSpan {
     display: block;
+    color: red;
 }

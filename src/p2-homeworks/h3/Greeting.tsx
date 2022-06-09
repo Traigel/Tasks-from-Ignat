@@ -15,11 +15,12 @@ const Greeting: React.FC<GreetingPropsType> = (
 
     const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => setNameCallback(e.currentTarget.value)
     const onKeyPressHandler = (e: KeyboardEvent<HTMLInputElement>) => e.key === 'Enter' && addUser()
-    const inputClass = (error !== '' ? style.error : '')// need to fix with (?:)
+    const inputClass = (name === '' ? style.error : '')// need to fix with (?:)
 
     return (
-        <div className={`${style.MainTitle} ${inputClass}`}>
-            <input value={name}
+        <div className={style.MainTitle}>
+            <input className={inputClass}
+                   value={name}
                    onChange={onChangeHandler}
                    onKeyPress={onKeyPressHandler}
             />
