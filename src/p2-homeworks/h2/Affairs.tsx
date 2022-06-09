@@ -19,26 +19,15 @@ function Affairs(props: AffairsPropsType) {
         />
     ))
 
-    const setAll = () => {
-        props.setFilter('all')
-    }
-    const setHigh = () => {
-        props.setFilter('high')
-    }
-    const setMiddle = () => {
-        props.setFilter('middle')
-    }
-    const setLow = () => {
-        props.setFilter('low')
-    }
+    const onClickHandler = (filter: FilterType) => props.setFilter(filter)
 
     return (
         <div className={styles.item}>
             {mappedAffairs}
-            <button className={styles.buttonItem} onClick={setAll}>All</button>
-            <button className={styles.buttonItem} onClick={setHigh}>High</button>
-            <button className={styles.buttonItem} onClick={setMiddle}>Middle</button>
-            <button className={styles.buttonItem} onClick={setLow}>Low</button>
+            <button className={styles.buttonItem} onClick={()=>onClickHandler('all')}>All</button>
+            <button className={styles.buttonItem} onClick={()=>onClickHandler('high')}>High</button>
+            <button className={styles.buttonItem} onClick={()=>onClickHandler('middle')}>Middle</button>
+            <button className={styles.buttonItem} onClick={()=>onClickHandler('low')}>Low</button>
         </div>
     )
 }
