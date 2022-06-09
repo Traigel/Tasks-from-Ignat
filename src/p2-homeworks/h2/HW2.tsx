@@ -19,11 +19,9 @@ const defaultAffairs: AffairType = [ // need to fix any
 ]
 
 export const filterAffairs = (affairs: AffairType, filter: FilterType): AffairType => { // need to fix any
-
-    if (filter === 'all') return affairs
-    return affairs.filter(el => el.priority === filter)
-
+    return filter === 'all' ? affairs : affairs.filter(el => el.priority === filter)
 }
+
 export const deleteAffair = (affairs: AffairType, _id: number): AffairType => { // need to fix any
     return (
         affairs.filter(u => u._id !== _id)
