@@ -14,20 +14,21 @@ type GreetingContainerPropsType = {
 // уровень локальной логики
 const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUserCallback}) => {
     const [name, setName] = useState<string>('') // need to fix any
-    const [error, setError] = useState<string>('') // need to fix any
+    const [error, setError] = useState<boolean>(false) // need to fix any
 
     const setNameCallback = (e: string) => {
-        if (!/^[A-z]/.test(e)) {
-            setError('Error, name must start with a letter!')
-            setName('')
-        } else setName(e)
+        if (/[A-z]/.test(e)) {
+            setName(e)
+            setError(false)
+        } else setError(true)
     }
 
     const addUser = () => {
-        addUserCallback(name)
-        alert(`Hello ${name} !`) // need to fix
-        setName('')
-        setError('')
+        if (name.trim() !== '') {
+            addUserCallback(name.trim())
+            setName('')
+            alert(`Hello ${name.trim()} !`) // need to fix
+        } else setError(true)
     }
 
     const totalUsers = users.length // need to fix

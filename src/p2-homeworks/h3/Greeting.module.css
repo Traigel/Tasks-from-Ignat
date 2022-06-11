@@ -7,8 +7,8 @@
     margin-left: 10px;
 }
 
-.error:focus {
-    border: 3px solid red;
+.error{
+    border: red 1px solid;
 }
 
 .errSpan {
