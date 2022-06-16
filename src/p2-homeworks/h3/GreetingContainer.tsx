@@ -17,7 +17,7 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const [error, setError] = useState<boolean>(false) // need to fix any
 
     const setNameCallback = (e: string) => {
-        if (/[A-z]/.test(e)) {
+        if (e !== ' ') {
             setName(e)
             setError(false)
         } else setError(true)

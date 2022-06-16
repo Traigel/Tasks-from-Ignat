@@ -1,5 +1,7 @@
 import React, {ChangeEvent, KeyboardEvent} from 'react'
 import style from './Greeting.module.css'
+import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import SuperInputText from "../h4/common/c1-SuperInputText/SuperInputText";
 
 type GreetingPropsType = {
     name: string // need to fix any
@@ -19,17 +21,19 @@ const Greeting: React.FC<GreetingPropsType> = (
 
     return (
         <div className={style.MainTitle}>
-            <input className={inputClass}
-                   value={name}
-                   onChange={onChangeHandler}
-                   onKeyPress={onKeyPressHandler}
+            <SuperInputText
+                className={inputClass}
+                value={name}
+                onChange={onChangeHandler}
+                onKeyPress={onKeyPressHandler}
             />
-            <button className={`${style.title} ${inputClass}`}
-                    disabled={!name}
-                    onClick={addUser}>add
-            </button>
+            <SuperButton
+                className={`${style.title} ${inputClass}`}
+                onClick={addUser}
+                disabled={!name}
+            >add</SuperButton>
             <span className={style.title}>{totalUsers}</span>
-            <span className={style.errSpan}>{error ? 'Error, name must start with a letter!' : ''}</span>
+            <span className={style.errSpan}>{error ? 'Error, name cannot be empty!' : ''}</span>
         </div>
     )
 }
