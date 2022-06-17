@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Tasks-from-Ignat/static/css/main.ad4e9b74.css",
+    "main.js": "/Tasks-from-Ignat/static/js/main.8d889b9e.js",
+    "index.html": "/Tasks-from-Ignat/index.html",
+    "main.ad4e9b74.css.map": "/Tasks-from-Ignat/static/css/main.ad4e9b74.css.map",
+    "main.8d889b9e.js.map": "/Tasks-from-Ignat/static/js/main.8d889b9e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ad4e9b74.css",
+    "static/js/main.8d889b9e.js"
+  ]
+}
