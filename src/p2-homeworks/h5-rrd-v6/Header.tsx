@@ -5,7 +5,8 @@ import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 
 function Header() {
 
-    const [taskItem, setTaskItem] = useState<boolean>(true)
+    const [taskItem, setTaskItem] = useState<boolean>(false)
+    const onClickHandler = () => setTaskItem(!taskItem)
 
     return (
         <div className={styles.header}>
@@ -25,9 +26,9 @@ function Header() {
                     to={'/juniorPlus'}
                 >juniorPlus</NavLink>
             </div> : ''}
-            <div className={styles.buttonMenu}>
-                {!taskItem ? 'Menu' : ''}
-            </div>
+            <SuperButton className={styles.buttonMenu} onClick={onClickHandler}>
+                {taskItem ? 'X' : 'Menu'}
+            </SuperButton>
         </div>
     )
 }

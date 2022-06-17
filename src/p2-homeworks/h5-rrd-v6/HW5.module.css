@@ -3,7 +3,6 @@
 }
 
 .buttonMenu {
-    color: red;
     display: inline-block;
     margin-left: 10px;
 }
@@ -13,7 +12,7 @@
 }
 
 .navLinkItems a {
-    margin-left: 10px;
+    padding-left: 10px;
     text-decoration: none;
 }
 
