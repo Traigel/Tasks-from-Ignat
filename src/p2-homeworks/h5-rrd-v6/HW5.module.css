@@ -1,0 +1,31 @@
+.header {
+    display: inline-block;
+}
+
+.buttonMenu {
+    color: red;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.navLinkItems {
+    display: inline-block;
+}
+
+.navLinkItems a {
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.link {
+    color: black;
+}
+
+.activeLink {
+    color: red;
+}
+
+.error404 {
+    color: red;
+    text-align: center;
+}
