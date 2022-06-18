@@ -1,19 +1,11 @@
-.header {
-    display: inline-block;
-}
-
-.buttonMenu {
-    display: inline-block;
-    margin-left: 10px;
-}
-
 .navLinkItems {
-    display: inline-block;
+    margin-bottom: 50px;
 }
 
-.navLinkItems a {
+.box a {
     padding-left: 10px;
     text-decoration: none;
+    margin: 0 5px;
 }
 
 .link {
@@ -27,4 +19,32 @@
 .error404 {
     color: red;
     text-align: center;
+}
+
+.slide {
+    position: absolute;
+    background: #999;
+    width: 300px;
+    left: -300px;
+    height: 40px;
+    transition: left 0.4s ease-in-out;
+    -o-transition: left 0.4s ease-in-out;
+    -ms-transition: left 0.4s ease-in-out;
+    -moz-transition: left 0.4s ease-in-out;
+    -webkit-transition: left 0.4s ease-in-out;
+}
+
+.toggle {
+    position: absolute;
+    left: 300px;
+    padding: 10px;
+    background: #ccc;
+}
+
+.box {
+    padding: 8px;
+}
+
+.slide:hover {
+    left: 0;
 }
