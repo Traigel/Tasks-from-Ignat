@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import Greeting from './Greeting'
 import {UserType} from "./HW3";
+import styles from './Greeting.module.css'
 
 type GreetingContainerPropsType = {
     users: Array<UserType> // need to fix any
@@ -24,17 +25,18 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     }
 
     const addUser = () => {
-        if (name.trim() !== '') {
-            addUserCallback(name.trim())
+        const nameReplace = name.replace(/^ +| +$|( ) +/g, "$1")
+        if (nameReplace !== '') {
+            addUserCallback(nameReplace)
             setName('')
-            alert(`Hello ${name.trim()} !`) // need to fix
+            alert(`Hello ${nameReplace} !`) // need to fix
         } else setError(true)
     }
 
     const totalUsers = users.length // need to fix
 
     return (
-        <div>
+        <div className={styles.greetingList}>
             <Greeting
                 name={name}
                 setNameCallback={setNameCallback}
@@ -42,6 +44,9 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
                 error={error}
                 totalUsers={totalUsers}
             />
+            <ul>
+                {users.map(el => <li key={el._id}>{el.name}</li>)}
+            </ul>
         </div>
     )
 }
