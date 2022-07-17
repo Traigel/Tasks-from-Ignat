@@ -1,0 +1,13 @@
+.item {
+    display: grid;
+    grid-template-columns: 175px 20px;
+}
+
+.items {
+    width: 195px;
+    border: 1px black solid;
+    border-radius: 10px;
+    background-color: cadetblue;
+    padding: 3px;
+    margin-bottom: 3px;
+}
