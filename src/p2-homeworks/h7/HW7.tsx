@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import SuperSelect from './common/c5-SuperSelect/SuperSelect'
 import SuperRadio from './common/c6-SuperRadio/SuperRadio'
+import styles from './HW7.module.css'
 
 const arr = ['x', 'y', 'z']
 
@@ -13,14 +14,14 @@ function HW7() {
             <p>homeworks 7</p>
 
             {/*should work (должно работать)*/}
-            <div style={{margin:'10px', display: "inline-block"}}>
+            <div className={styles.item}>
                 <SuperSelect
                     options={arr}
                     value={value}
                     onChangeOption={onChangeOption}
                 />
             </div>
-            <div style={{margin:'10px', display: "inline-block"}}>
+            <div className={styles.item}>
                 <SuperRadio
                     name={'radio'}
                     options={arr}

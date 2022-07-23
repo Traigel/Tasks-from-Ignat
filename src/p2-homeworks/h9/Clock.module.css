@@ -1,0 +1,10 @@
+.time {
+    width: 83px;
+    height: 45px;
+    background-color: cadetblue;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 3px;
+    margin-bottom: 5px;
+    text-align: center;
+}
