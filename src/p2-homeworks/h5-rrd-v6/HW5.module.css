@@ -22,7 +22,7 @@
 
 .slide {
     position: absolute;
-    background: #999;
+    background: #68bbbd;
     width: 300px;
     left: -300px;
     height: 40px;
@@ -37,11 +37,13 @@
     position: absolute;
     left: 300px;
     padding: 10px;
-    background: #ccc;
+    background: cadetblue;
+    height: 20px;
+    border-radius: 0 10px 10px 0;
 }
 
 .box {
-    padding: 8px;
+    padding: 9px;
 }
 
 .slide:hover {

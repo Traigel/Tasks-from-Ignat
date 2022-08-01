@@ -23,7 +23,7 @@ function Clock() {
     const onMouseEnter = () => setShow(true)
     const onMouseLeave = () => setShow(false)
 
-    let stringTime = date === undefined ? 'Click start' : date.getHours() + '.' + date.getMinutes() + '.' + date.getSeconds()
+    let stringTime = date === undefined ? 'Click start' : `${date.getHours()}.${+ date.getMinutes()}.${date.getSeconds()}`
     let stringDate = date === undefined ? '' : date.getDate() + '.' + (date.getMonth() + 1) + '.' + date.getFullYear()
 
     return (
