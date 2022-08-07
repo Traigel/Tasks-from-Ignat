@@ -12,20 +12,23 @@ function HW11() {
             homeworks 11
 
             {/*should work (должно работать)*/}
-            <div>
-                <span>{value1}</span>
-                <SuperRange
-                    // сделать так чтоб value1 изменялось
-                />
+            <div style={{margin: '10px'}}>
+                <div>
+                    <span>{value1}</span>
+                    <SuperRange
+                        onChangeRange={(value) => setValue1(value)}
+                    />
+                </div>
+
+                <div>
+                    <span>{value1}</span>
+                    <SuperDoubleRange
+                        // сделать так чтоб value1 и value2 изменялось
+                    />
+                    <span>{value2}</span>
+                </div>
             </div>
 
-            <div>
-                <span>{value1}</span>
-                <SuperDoubleRange
-                    // сделать так чтоб value1 и value2 изменялось
-                />
-                <span>{value2}</span>
-            </div>
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
