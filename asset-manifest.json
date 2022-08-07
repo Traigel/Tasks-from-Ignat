@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/Tasks-from-Ignat/static/css/main.d6e895ca.css",
-    "main.js": "/Tasks-from-Ignat/static/js/main.6796c1cf.js",
+    "main.css": "/Tasks-from-Ignat/static/css/main.bfe4d129.css",
+    "main.js": "/Tasks-from-Ignat/static/js/main.032358a3.js",
     "static/media/loader.gif": "/Tasks-from-Ignat/static/media/loader.a1a996746e5e48352c81.gif",
     "index.html": "/Tasks-from-Ignat/index.html",
-    "main.d6e895ca.css.map": "/Tasks-from-Ignat/static/css/main.d6e895ca.css.map",
-    "main.6796c1cf.js.map": "/Tasks-from-Ignat/static/js/main.6796c1cf.js.map"
+    "main.bfe4d129.css.map": "/Tasks-from-Ignat/static/css/main.bfe4d129.css.map",
+    "main.032358a3.js.map": "/Tasks-from-Ignat/static/js/main.032358a3.js.map"
   },
   "entrypoints": [
-    "static/css/main.d6e895ca.css",
-    "static/js/main.6796c1cf.js"
+    "static/css/main.bfe4d129.css",
+    "static/js/main.032358a3.js"
   ]
 }
