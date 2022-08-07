@@ -46,7 +46,7 @@ function HW8() {
                 <div className={styles.items}>
                     {finalPeople}
                 </div>
-                <SuperButton onClick={sortUp}>sort up</SuperButton>
+                <SuperButton onClick={sortUp} style={{marginLeft: '4px'}}>sort up</SuperButton>
                 <SuperButton onClick={sortDown}>sort down</SuperButton>
                 <SuperButton onClick={ageCheck}>check 18</SuperButton>
             </div>
