@@ -1,22 +1,36 @@
 import React from "react";
-import s from "./HW12.module.css";
+import SuperSelect from "../h7/common/c5-SuperSelect/SuperSelect";
+import styles from "./HW12.module.css";
+import {useDispatch, useSelector} from "react-redux";
+import {AppStoreType} from "../h10/bll/store";
+import {changeThemeAC} from "./bll/themeReducer";
+import SuperRadio from "../h7/common/c6-SuperRadio/SuperRadio";
 
-const themes = ['dark', 'red', 'some'];
+const themes: string[] = ['white', 'blue', 'yellow', 'dark', 'red', 'some'];
 
 function HW12() {
-    const theme = 'some'; // useSelector
+    const theme = useSelector<AppStoreType, string>(store => store.themes.theme)
+    const dispatch = useDispatch()
 
-    // useDispatch, onChangeCallback
+    const onChangeCallback = (newTheme: string) => dispatch(changeThemeAC(newTheme))
 
     return (
-        <div className={s[theme]}>
+        <div className={styles[theme]}>
             <hr/>
-            <span className={s[theme + '-text']}>
-                homeworks 12
-            </span>
-
+            <div>
+                <span className={styles[theme + '-text']}>
+                    homeworks 12
+                </span>
+            </div>
+            <div className={styles.item}>
+                <SuperSelect
+                    options={themes}
+                    value={theme}
+                    onChangeOption={onChangeCallback}
+                />
+            </div>
             {/*should work (должно работать)*/}
-            {/*SuperSelect or SuperRadio*/}
+            {/*SuperSelect tor SuperRadio*/}
 
             <hr/>
         </div>
