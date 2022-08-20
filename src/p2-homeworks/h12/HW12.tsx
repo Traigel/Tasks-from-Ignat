@@ -4,7 +4,6 @@ import styles from "./HW12.module.css";
 import {useDispatch, useSelector} from "react-redux";
 import {AppStoreType} from "../h10/bll/store";
 import {changeThemeAC} from "./bll/themeReducer";
-import SuperRadio from "../h7/common/c6-SuperRadio/SuperRadio";
 
 const themes: string[] = ['white', 'blue', 'yellow', 'dark', 'red', 'some'];
 

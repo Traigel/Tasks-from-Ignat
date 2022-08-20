@@ -24,20 +24,20 @@ function Clock() {
     const onMouseLeave = () => setShow(false)
 
     let stringTime = date === undefined ? 'Click start'
-        :`${date.getHours() < 10 ? '0' + date.getHours() : date.getHours()}
-        :${date.getMinutes() < 10 ? '0' + date.getMinutes : date.getMinutes()}
-        :${date.getSeconds() < 10 ? '0' + date.getSeconds(): date.getSeconds()}`
+        : `${date.getHours() < 10 ? '0' + date.getHours() : date.getHours()}
+        :${date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes()}
+        :${date.getSeconds() < 10 ? '0' + date.getSeconds() : date.getSeconds()}`
 
     let stringDate = date === undefined ? ''
-        :`${date.getDate() < 10 ? '0' + date.getDate() : date.getDate()}
+        : `${date.getDate() < 10 ? '0' + date.getDate() : date.getDate()}
         .${(date.getMonth() + 1) < 10 ? '0' + (date.getMonth() + 1) : (date.getMonth() + 1)}
         .${date.getFullYear()}`
 
     return (
-        <div style={{margin: '10px'}}>
+        <div style={{margin: '20px'}}>
             <div className={styles.time}
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
+                 onMouseEnter={onMouseEnter}
+                 onMouseLeave={onMouseLeave}
             >
                 {stringTime}
                 {show && (

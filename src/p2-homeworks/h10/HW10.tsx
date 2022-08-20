@@ -23,7 +23,7 @@ function HW10() {
             homeworks 10
 
             {/*should work (должно работать)*/}
-            <div style={{margin: '10px', height: '50px'}}>
+            <div style={{margin: '20px', height: '50px'}}>
                 {loading
                     ? (
                         <div style={{marginLeft: '15px'}}>

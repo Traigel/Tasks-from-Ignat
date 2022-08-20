@@ -42,7 +42,7 @@ function HW8() {
             homeworks 8
 
             {/*should work (должно работать)*/}
-            <div style={{margin: '10px'}}>
+            <div style={{margin: '20px'}}>
                 <div className={styles.items}>
                     {finalPeople}
                 </div>
